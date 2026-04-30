@@ -1,7 +1,6 @@
 import TileCard from "@/components/shared/TileCard";
-import Category from "@/components/Category";
-import { getTiles } from "@/services/api";
 
+import { getTiles } from "@services/api";
 const AllTilesPage = async ({ searchParams }) => {
 
   // ✅ Next.js params unwrap
@@ -28,7 +27,7 @@ const AllTilesPage = async ({ searchParams }) => {
       </h1>
 
       {/* Category Filter */}
-      <Category />
+     
 
       {/* Tiles Grid */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-4">
