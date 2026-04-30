@@ -1,16 +1,9 @@
 import { getTiles } from "@/services/api";
 
 const TileDetailsPage = async ({ params }) => {
-
-
   const { id } = await params;
-
-
   const tiles = await getTiles();
-
-
   const tile = tiles.find((t) => t.id === id);
-
 
   if (!tile) {
     return <div className="p-4">Tile not found</div>;
@@ -20,7 +13,7 @@ const TileDetailsPage = async ({ params }) => {
     <div className="max-w-5xl mx-auto p-4">
 
       {/* Image */}
-      <img
+      <image
         src={tile.image}
         alt={tile.title}
         className="w-full h-[400px] object-cover rounded-xl"

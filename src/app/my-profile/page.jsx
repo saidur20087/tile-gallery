@@ -3,8 +3,9 @@
 
 import { authClient } from "@/lib/auth-client";
 import { Avatar, Card } from "@heroui/react";
-import { redirect } from "next/navigation";
-import { UpdateUserModal } from "../update-profile/page";
+import UpdateUserModal from "../update-profile/page";
+
+
 
 const ProfilePage = () => {
   const userData = authClient.useSession();

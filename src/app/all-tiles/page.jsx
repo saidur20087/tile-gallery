@@ -1,16 +1,16 @@
 import TileCard from "@/components/shared/TileCard";
 
-import { getTiles } from "@services/api";
+import { getTiles } from "../../services/api";
 const AllTilesPage = async ({ searchParams }) => {
 
-  // ✅ Next.js params unwrap
+ 
   const params = await searchParams;
   const category = params?.category;
 
-  // ✅ get data from your API/service
+
   const tiles = await getTiles();
 
-  // ✅ filter tiles by category
+ 
   const filteredTiles = category
     ? tiles.filter(
         (tile) =>
