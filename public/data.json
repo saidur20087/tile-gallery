@@ -1,0 +1,92 @@
+[
+  {
+    "id": "tile_001",
+    "title": "Ceramic Blue Tile",
+    "image": "https://i.pinimg.com/736x/6a/11/2c/6a112c2b0c7f2c1c8d9f1b2a9c1e4a01.jpg",
+    "price": 45.99
+  },
+  {
+    "id": "tile_002",
+    "title": "White Marble Tile",
+    "image": "https://i.pinimg.com/736x/9c/22/4f/9c224f2a9b1c8d7e1a6c3d5f8e2b9a11.jpg",
+    "price": 78.5
+  },
+  {
+    "id": "tile_003",
+    "title": "Wood Texture Tile",
+    "image": "https://i.pinimg.com/736x/3f/91/aa/3f91aa7c2b8e1d6f9c2a8b1d0e5f7c33.jpg",
+    "price": 52.0
+  },
+  {
+    "id": "tile_004",
+    "title": "Black Stone Tile",
+    "image": "https://i.pinimg.com/736x/1a/8b/4d/1a8b4d2c9f6e7a3b1c8d5e2f9a0b1c22.jpg",
+    "price": 65.0
+  },
+  {
+    "id": "tile_005",
+    "title": "Golden Luxury Tile",
+    "image": "https://i.pinimg.com/736x/8d/21/5a/8d215ac9f1b2e4d6c7a8b9d0e1f2a3b4.jpg",
+    "price": 120.0
+  },
+  {
+    "id": "tile_006",
+    "title": "Grey Matte Tile",
+    "image": "https://i.pinimg.com/736x/7b/12/3c/7b123c9a1d2e4f5a6b7c8d9e0f1a2b3c.jpg",
+    "price": 40.0
+  },
+  {
+    "id": "tile_007",
+    "title": "Mosaic Pattern Tile",
+    "image": "https://i.pinimg.com/736x/5c/22/8d/5c228d9f1a2b3c4d5e6f7a8b9c0d1e2f.jpg",
+    "price": 55.0
+  },
+  {
+    "id": "tile_008",
+    "title": "Beige Sand Tile",
+    "image": "https://i.pinimg.com/736x/2a/44/9c/2a449c8d1e2f3a4b5c6d7e8f9a0b1c2d.jpg",
+    "price": 38.99
+  },
+  {
+    "id": "tile_009",
+    "title": "Rustic Brick Tile",
+    "image": "https://i.pinimg.com/736x/4d/11/7a/4d117a9b2c3d4e5f6a7b8c9d0e1f2a3b.jpg",
+    "price": 48.75
+  },
+  {
+    "id": "tile_010",
+    "title": "Glossy Silver Tile",
+    "image": "https://i.pinimg.com/736x/6f/33/9b/6f339b1c2d3e4f5a6b7c8d9e0f1a2b3c.jpg",
+    "price": 70.0
+  },
+  {
+    "id": "tile_011",
+    "title": "Ocean Wave Tile",
+    "image": "https://i.pinimg.com/736x/8a/22/5c/8a225c9d1e2f3a4b5c6d7e8f9a0b1c2d.jpg",
+    "price": 60.0
+  },
+  {
+    "id": "tile_012",
+    "title": "Minimal White Tile",
+    "image": "https://i.pinimg.com/736x/1c/55/8e/1c558e9a2b3c4d5e6f7a8b9c0d1e2f3a.jpg",
+    "price": 35.0
+  },
+  {
+    "id": "tile_013",
+    "title": "Terrazzo Style Tile",
+    "image": "https://i.pinimg.com/736x/9e/77/2b/9e772b1c2d3e4f5a6b7c8d9e0f1a2b3c.jpg",
+    "price": 58.0
+  },
+  {
+    "id": "tile_014",
+    "title": "Dark Marble Gold Vein",
+    "image": "https://i.pinimg.com/736x/3b/88/6d/3b886d9c1a2b3c4d5e6f7a8b9c0d1e2f.jpg",
+    "price": 150.0
+  },
+  {
+    "id": "tile_015",
+    "title": "Sky Blue Gloss Tile",
+    "image": "https://i.pinimg.com/736x/7c/19/4e/7c194e9a2b3c4d5e6f7a8b9c0d1e2f3a.jpg",
+    "price": 42.0
+  }
+]

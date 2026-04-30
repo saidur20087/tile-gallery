@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Ceramic",
+    "slug": "ceramic"
+  },
+  {
+    "id": 2,
+    "name": "Marble",
+    "slug": "marble"
+  },
+  {
+    "id": 3,
+    "name": "Porcelain",
+    "slug": "porcelain"
+  },
+  {
+    "id": 4,
+    "name": "Wood Finish",
+    "slug": "wood"
+  },
+  {
+    "id": 5,
+    "name": "Stone",
+    "slug": "stone"
+  },
+  {
+    "id": 6,
+    "name": "Mosaic",
+    "slug": "mosaic"
+  },
+  {
+    "id": 7,
+    "name": "Modern",
+    "slug": "modern"
+  },
+  {
+    "id": 8,
+    "name": "Luxury",
+    "slug": "luxury"
+  },
+  {
+    "id": 9,
+    "name": "Minimal",
+    "slug": "minimal"
+  }
+]
