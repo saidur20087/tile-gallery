@@ -1,109 +1,131 @@
 "use client";
+import { authClient } from "@/lib/auth-client";
+import { Check } from "@gravity-ui/icons";
+import {
+  Button,
+  Card,
+  Description,
+  FieldError,
+  Form,
+  Input,
+  Label,
+  TextField,
+} from "@heroui/react";
+import { useRouter } from "next/navigation";
+import { GrGoogle } from "react-icons/gr";
 
-import { useState } from "react";
-import toast from "react-hot-toast";
-import Link from "next/link";
+export default function SignUpPage() {
 
-export default function Register() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    photo: "",
-    password: "",
-  });
+  const router = useRouter()
 
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
+  const onSubmit = async (e) => {
+    e.preventDefault();
 
-  const handleRegister = () => {
-    const { name, email, password } = form;
+    const name = e.target.name.value;
+    const image = e.target.image.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
 
-    // basic validation
-    if (!name || !email || !password) {
-      toast.error("Name, Email and Password required");
-      return;
+    const { data, error } = await authClient.signUp.email({
+      name,
+      email,
+      password,
+      image,
+    })
+
+
+    console.log({ data, error })
+
+    if (!error) {
+      router.push('/')
     }
 
-    // fake success (later BetterAuth connect করবে)
-    toast.success("Registration Successful!");
-
-    console.log("User Data:", form);
-
-    // optional: reset form
-    setForm({
-      name: "",
-      email: "",
-      photo: "",
-      password: "",
-    });
   };
 
+  const handlGoogleSignIn = async () => {
+    await authClient.signIn.social({
+        provider: 'google'
+    })
+  }
+
+
   return (
-    <div className="min-h-screen flex items-center justify-center px-4">
-      <div className="w-full max-w-md p-6 border rounded shadow">
+    <Card className="border mx-auto w-125 py-10 mt-5">
+      <h1 className="text-center text-2xl font-bold">Sign Up</h1>
 
-        <h1 className="text-2xl font-bold mb-5 text-center">
-          Register Account
-        </h1>
+      <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
+        <TextField isRequired name="name" type="text">
+          <Label>Name</Label>
+          <Input placeholder="Enter your name" />
+          <FieldError />
+        </TextField>
 
-        {/* Name */}
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          value={form.name}
-          onChange={handleChange}
-          className="w-full border p-2 mb-3"
-        />
+        <TextField isRequired name="image" type="text">
+          <Label>Image URL</Label>
+          <Input placeholder="Image URL" />
+          <FieldError />
+        </TextField>
 
-        {/* Email */}
-        <input
-          type="email"
+        <TextField
+          isRequired
           name="email"
-          placeholder="Email"
-          value={form.email}
-          onChange={handleChange}
-          className="w-full border p-2 mb-3"
-        />
+          type="email"
+          validate={(value) => {
+            if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
+              return "Please enter a valid email address";
+            }
 
-        {/* Photo URL */}
-        <input
-          type="text"
-          name="photo"
-          placeholder="Photo URL (optional)"
-          value={form.photo}
-          onChange={handleChange}
-          className="w-full border p-2 mb-3"
-        />
-
-        {/* Password */}
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={form.password}
-          onChange={handleChange}
-          className="w-full border p-2 mb-4"
-        />
-
-        {/* Register Button */}
-        <button
-          onClick={handleRegister}
-          className="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600"
+            return null;
+          }}
         >
-          Register
-        </button>
+          <Label>Email</Label>
+          <Input placeholder="john@example.com" />
+          <FieldError />
+        </TextField>
 
-        {/* Login link */}
-        <p className="text-center mt-4 text-sm">
-          Already have an account?{" "}
-          <Link href="/login" className="text-blue-500 font-semibold">
-            Login
-          </Link>
-        </p>
+        <TextField
+          isRequired
+          minLength={8}
+          name="password"
+          type="password"
+          validate={(value) => {
+            if (value.length < 8) {
+              return "Password must be at least 8 characters";
+            }
+            if (!/[A-Z]/.test(value)) {
+              return "Password must contain at least one uppercase letter";
+            }
+            if (!/[0-9]/.test(value)) {
+              return "Password must contain at least one number";
+            }
 
-      </div>
-    </div>
+            return null;
+          }}
+        >
+          <Label>Password</Label>
+          <Input placeholder="Enter your password" />
+          <Description>
+            Must be at least 8 characters with 1 uppercase and 1 number
+          </Description>
+          <FieldError />
+        </TextField>
+
+        <div className="flex gap-2">
+          <Button type="submit">
+            <Check />
+            Submit
+          </Button>
+          <Button type="reset" variant="secondary">
+            Reset
+          </Button>
+        </div>
+      </Form>
+
+      <p className="text-center">Or</p>
+
+      <Button onClick={handlGoogleSignIn} variant="outline" className={'w-full'}><GrGoogle /> Sign In With Google</Button>
+
+
+    </Card>
   );
 }

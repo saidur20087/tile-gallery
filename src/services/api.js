@@ -1,5 +1,6 @@
 export const getTiles = async () => {
-  const res = await fetch("http://localhost:3000/api/tiles",{cache:"no-store"});
+  const res = await fetch("https://tiles-gallery-psi.vercel.app/data.json",{cache:"no-store"});
+ 
   return res.json();
 };
 

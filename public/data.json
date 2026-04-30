@@ -2,91 +2,181 @@
   {
     "id": "tile_001",
     "title": "Ceramic Blue Tile",
-    "image": "https://i.pinimg.com/736x/6a/11/2c/6a112c2b0c7f2c1c8d9f1b2a9c1e4a01.jpg",
-    "price": 45.99
+    "description": "Premium ceramic tile with blue glaze finish",
+    "image": "https://i.ibb.co.com/gLkwcqHf/29013.jpg",
+    "category": "ceramic",
+    "price": 45.99,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": true
   },
   {
     "id": "tile_002",
-    "title": "White Marble Tile",
-    "image": "https://i.pinimg.com/736x/9c/22/4f/9c224f2a9b1c8d7e1a6c3d5f8e2b9a11.jpg",
-    "price": 78.5
+    "title": "Marble White Tile",
+    "description": "Elegant white marble finish tile",
+    "image": "https://i.ibb.co.com/LbSVW95/424982-PDU6-WG-101.jpg",
+    "category": "marble",
+    "price": 78.5,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Marble",
+    "inStock": true
   },
   {
     "id": "tile_003",
     "title": "Wood Texture Tile",
-    "image": "https://i.pinimg.com/736x/3f/91/aa/3f91aa7c2b8e1d6f9c2a8b1d0e5f7c33.jpg",
-    "price": 52.0
+    "description": "Natural wood style ceramic tile",
+    "image": "https://i.ibb.co.com/0RtPzLR2/24920.jpg",
+    "category": "wood",
+    "price": 52.0,
+    "currency": "USD",
+    "dimensions": "60x120 cm",
+    "material": "Ceramic",
+    "inStock": true
   },
   {
     "id": "tile_004",
     "title": "Black Stone Tile",
-    "image": "https://i.pinimg.com/736x/1a/8b/4d/1a8b4d2c9f6e7a3b1c8d5e2f9a0b1c22.jpg",
-    "price": 65.0
+    "description": "Premium dark stone texture tile",
+    "image": "/images/tiles/tile_004.jpg",
+    "category": "stone",
+    "price": 65.0,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Stone",
+    "inStock": true
   },
   {
     "id": "tile_005",
     "title": "Golden Luxury Tile",
-    "image": "https://i.pinimg.com/736x/8d/21/5a/8d215ac9f1b2e4d6c7a8b9d0e1f2a3b4.jpg",
-    "price": 120.0
+    "description": "Luxury golden finish tile",
+    "image": "/images/tiles/tile_005.jpg",
+    "category": "luxury",
+    "price": 120.0,
+    "currency": "USD",
+    "dimensions": "80x80 cm",
+    "material": "Ceramic",
+    "inStock": false
   },
   {
     "id": "tile_006",
     "title": "Grey Matte Tile",
-    "image": "https://i.pinimg.com/736x/7b/12/3c/7b123c9a1d2e4f5a6b7c8d9e0f1a2b3c.jpg",
-    "price": 40.0
+    "description": "Minimal matte grey tile",
+    "image": "/images/tiles/tile_006.jpg",
+    "category": "modern",
+    "price": 40.0,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": true
   },
   {
     "id": "tile_007",
     "title": "Mosaic Pattern Tile",
-    "image": "https://i.pinimg.com/736x/5c/22/8d/5c228d9f1a2b3c4d5e6f7a8b9c0d1e2f.jpg",
-    "price": 55.0
+    "description": "Decorative mosaic design tile",
+    "image": "/images/tiles/tile_007.jpg",
+    "category": "mosaic",
+    "price": 55.0,
+    "currency": "USD",
+    "dimensions": "30x30 cm",
+    "material": "Glass",
+    "inStock": true
   },
   {
     "id": "tile_008",
     "title": "Beige Sand Tile",
-    "image": "https://i.pinimg.com/736x/2a/44/9c/2a449c8d1e2f3a4b5c6d7e8f9a0b1c2d.jpg",
-    "price": 38.99
+    "description": "Soft beige sand color tile",
+    "image": "/images/tiles/tile_008.jpg",
+    "category": "ceramic",
+    "price": 38.99,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": true
   },
   {
     "id": "tile_009",
     "title": "Rustic Brick Tile",
-    "image": "https://i.pinimg.com/736x/4d/11/7a/4d117a9b2c3d4e5f6a7b8c9d0e1f2a3b.jpg",
-    "price": 48.75
+    "description": "Vintage brick style tile",
+    "image": "/images/tiles/tile_009.jpg",
+    "category": "brick",
+    "price": 48.75,
+    "currency": "USD",
+    "dimensions": "20x10 cm",
+    "material": "Clay",
+    "inStock": true
   },
   {
     "id": "tile_010",
-    "title": "Glossy Silver Tile",
-    "image": "https://i.pinimg.com/736x/6f/33/9b/6f339b1c2d3e4f5a6b7c8d9e0f1a2b3c.jpg",
-    "price": 70.0
+    "title": "Silver Gloss Tile",
+    "description": "Modern glossy silver tile",
+    "image": "/images/tiles/tile_010.jpg",
+    "category": "modern",
+    "price": 70.0,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Porcelain",
+    "inStock": true
   },
   {
     "id": "tile_011",
     "title": "Ocean Wave Tile",
-    "image": "https://i.pinimg.com/736x/8a/22/5c/8a225c9d1e2f3a4b5c6d7e8f9a0b1c2d.jpg",
-    "price": 60.0
+    "description": "Wave inspired blue pattern tile",
+    "image": "/images/tiles/tile_011.jpg",
+    "category": "art",
+    "price": 60.0,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": true
   },
   {
     "id": "tile_012",
     "title": "Minimal White Tile",
-    "image": "https://i.pinimg.com/736x/1c/55/8e/1c558e9a2b3c4d5e6f7a8b9c0d1e2f3a.jpg",
-    "price": 35.0
+    "description": "Simple clean white tile",
+    "image": "/images/tiles/tile_012.jpg",
+    "category": "minimal",
+    "price": 35.0,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": true
   },
   {
     "id": "tile_013",
-    "title": "Terrazzo Style Tile",
-    "image": "https://i.pinimg.com/736x/9e/77/2b/9e772b1c2d3e4f5a6b7c8d9e0f1a2b3c.jpg",
-    "price": 58.0
+    "title": "Terrazzo Tile",
+    "description": "Colorful terrazzo pattern tile",
+    "image": "/images/tiles/tile_013.jpg",
+    "category": "terrazzo",
+    "price": 58.0,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Composite",
+    "inStock": true
   },
   {
     "id": "tile_014",
     "title": "Dark Marble Gold Vein",
-    "image": "https://i.pinimg.com/736x/3b/88/6d/3b886d9c1a2b3c4d5e6f7a8b9c0d1e2f.jpg",
-    "price": 150.0
+    "description": "Luxury black marble with gold veins",
+    "image": "/images/tiles/tile_014.jpg",
+    "category": "marble",
+    "price": 150.0,
+    "currency": "USD",
+    "dimensions": "80x80 cm",
+    "material": "Marble",
+    "inStock": false
   },
   {
     "id": "tile_015",
     "title": "Sky Blue Gloss Tile",
-    "image": "https://i.pinimg.com/736x/7c/19/4e/7c194e9a2b3c4d5e6f7a8b9c0d1e2f3a.jpg",
-    "price": 42.0
+    "description": "Fresh sky blue glossy tile",
+    "image": "/images/tiles/tile_015.jpg",
+    "category": "ceramic",
+    "price": 42.0,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": true
   }
 ]
