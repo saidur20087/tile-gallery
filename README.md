@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🧱 Tiles Gallery Project
 
-## Getting Started
+A modern and responsive Tiles Gallery web application built with **Next.js**.  
+Users can explore tiles, view details, filter by category, and see latest updates in a news ticker.
 
-First, run the development server:
+---
+
+## 🚀 Features
+
+- 📸 Beautiful tiles gallery in grid layout  
+- 🔍 Dynamic tile details page (`/tile/[id]`)  
+- 🏷️ Category filtering system  
+- 📢 Latest news ticker section  
+- 🎨 Modern UI with card-based design  
+- ⚡ Fast performance with Next.js App Router  
+- 📱 Fully responsive design  
+
+---
+
+## 🛠️ Tech Stack
+
+- Next.js (App Router)
+- React
+- Tailwind CSS
+- HeroUI (UI Components)
+
+
+
+## 📦 Installation
 
 ```bash
+git clone https://github.com/saidur20087/tile-gallery
+cd tiles-gallery
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

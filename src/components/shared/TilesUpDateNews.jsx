@@ -21,10 +21,10 @@ import Marquee from 'react-fast-marquee';
 
 const TilesUpDateNews = () => {
   return (
-    <div className="flex items-center bg-gray-500 mt-8 rounded border border-green-400 text-white  overflow-hidden">
+    <div className="flex items-center bg-gray-200 mt-8 rounded border border-green-00 text-white  overflow-hidden">
       
      
-      <div className="px-2 py-2 font-bold whitespace-nowrap border bg-red-500 text-white border-green-600">
+      <div className="px-2 py-2 font-bold whitespace-nowrap border bg-red-400 text-white border-green-600">
         Latest Tiles News
       </div>
 
@@ -34,8 +34,8 @@ const TilesUpDateNews = () => {
           {news.map((item) => (
             <div key={item.id} className="flex items-center gap-3 mx-10">
               <span className="font-semibold text-green-900">{item.title}</span>
-              <span className="text-gray-300">•</span>
-              <span className="text-gray-200">{item.description}</span>
+              <span className="text-red-500">•</span>
+              <span className="text-gray-600">{item.description}</span>
             </div>
           ))}
         </div>

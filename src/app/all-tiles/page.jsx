@@ -1,14 +1,19 @@
-import Category from "@/components/Category";
-import TileCard from "@/components/TileCard";
+import TileCard from "@/components/shared/TileCard";
 
 const AllTilesPage = async ({ searchParams }) => {
-  const { category } = searchParams || {};
+  const category = searchParams?.category;
 
-  const res = await fetch("https://tiles-gallery-psi.vercel.app/data.json");
+  // 🔥 DATA FETCH
+  const res = await fetch(
+    "https://tiles-gallery-psi.vercel.app/data.json",
+    {
+      cache: "no-store", // always fresh data
+    }
+  );
+
   const tiles = await res.json();
 
-  console.log(category);
-
+  // 🔍 FILTER LOGIC
   const filteredTiles = category
     ? tiles.filter(
         (tile) =>
@@ -17,12 +22,11 @@ const AllTilesPage = async ({ searchParams }) => {
     : tiles;
 
   return (
-    <div>
-      <h1 className="text-2xl font-bold m-4">All Tiles</h1>
+    <div className="p-6">
+      <h1 className="text-2xl font-bold mb-6">All Tiles</h1>
 
-      <Category />
-
-      <div className="grid grid-cols-4 gap-5">
+      {/* GRID */}
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
         {filteredTiles.map((tile) => (
           <TileCard key={tile.id} tile={tile} />
         ))}
