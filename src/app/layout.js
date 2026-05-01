@@ -7,6 +7,7 @@ import "./globals.css";
 
 import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
+import { Toaster } from "react-hot-toast";
 
 
 
@@ -30,7 +31,9 @@ export default function RootLayout({ children }) {
     >
       <body>
     <Navbar />
-        <main className="max-w-7xl mx-auto">{children} 
+        <main className="max-w-7xl mx-auto">
+          {children} 
+          <Toaster position="top-center" />
           
         </main>
         <Footer/>

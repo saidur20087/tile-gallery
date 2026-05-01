@@ -12,6 +12,7 @@ import {
   TextField,
 } from "@heroui/react";
 import { GrGoogle } from "react-icons/gr";
+import toast from "react-hot-toast"; 
 
 export default function SignInPage() {
   const onSubmit = async (e) => {
@@ -26,58 +27,36 @@ export default function SignInPage() {
       callbackURL: "/",
     });
 
-    console.log({ data, error });
+    if (error) {
+      toast.error(error.message || "Login failed");
+    } else {
+      toast.success("Login successful ");
+    }
   };
 
   const handlGoogleSignIn = async () => {
-    await authClient.signIn.social({
-        provider: 'google'
-    })
-  }
-
-
+    try {
+      await authClient.signIn.social({
+        provider: "google",
+      });
+      toast.success("Redirecting to Google...");
+    } catch (err) {
+      toast.error("Google sign-in failed");
+    }
+  };
 
   return (
     <Card className="border border-cyan-500 mx-auto w-90 md:w-125 py-10 mt-5">
       <h1 className="text-center text-2xl font-bold">Sign In</h1>
 
       <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
-        <TextField
-          isRequired
-          name="email"
-          type="email"
-          validate={(value) => {
-            if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
-              return "Please enter a valid email address";
-            }
-
-            return null;
-          }}
-        >
+        <TextField isRequired name="email" type="email">
           <Label>Email</Label>
           <Input placeholder="john@example.com" />
           <FieldError />
         </TextField>
 
-        <TextField
-          isRequired
-          minLength={8}
-          name="password"
-          type="password"
-          validate={(value) => {
-            if (value.length < 8) {
-              return "Password must be at least 8 characters";
-            }
-            if (!/[A-Z]/.test(value)) {
-              return "Password must contain at least one uppercase letter";
-            }
-            if (!/[0-9]/.test(value)) {
-              return "Password must contain at least one number";
-            }
-
-            return null;
-          }}
-        >
+        <TextField isRequired name="password" type="password">
           <Label>Password</Label>
           <Input placeholder="Enter your password" />
           <Description>
@@ -87,11 +66,11 @@ export default function SignInPage() {
         </TextField>
 
         <div className="flex md:justify-between gap-2">
-          <Button type="submit" className='bg-gradient-to-r from-cyan-800 to-cyan-500 w-40 md:w-full'>
+          <Button type="submit" className="bg-gradient-to-r from-cyan-800 to-cyan-500 w-40 md:w-full">
             <Check />
             Submit
           </Button>
-          <Button type="reset" variant="secondary" className='w-40 md:w-full'>
+          <Button type="reset" variant="secondary" className="w-40 md:w-full">
             Reset
           </Button>
         </div>
@@ -99,8 +78,12 @@ export default function SignInPage() {
 
       <p className="text-center">Or</p>
 
-      <Button onClick={handlGoogleSignIn}  className={' w-80 md:w-full bg-gradient-to-r from-cyan-800 to-cyan-500'}>
-        <GrGoogle/> Sign In With Google</Button>
+      <Button
+        onClick={handlGoogleSignIn}
+        className="w-80 md:w-full bg-gradient-to-r from-cyan-800 to-cyan-500"
+      >
+        <GrGoogle /> Sign In With Google
+      </Button>
     </Card>
   );
 }
