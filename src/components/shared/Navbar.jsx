@@ -102,7 +102,7 @@ const Navbar = () => {
                 {user?.name}
               </Link>
 
-              <Button onClick={handleSignOut} size="sm" color="danger">
+              <Button onClick={handleSignOut} size="md" className='bg-gradient-to-r from-cyan-800 to-cyan-500 rounded'>
                 Logout
               </Button>
 
