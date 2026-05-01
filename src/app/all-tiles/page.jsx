@@ -1,52 +1,41 @@
-import { getTiles } from "../../services/api";
+import TileCard from "@/components/shared/TileCard";
 
-const TileDetails = async ({ params }) => {
-  const id = params?.id;
 
-  const tiles = await getTiles();
+const AllTilesPage = async ({ searchParams }) => {
+  const category = searchParams?.category;
 
-  const tile = tiles.find((t) => String(t.id) === String(id));
 
-  if (!tile) {
-    return (
-      <div className="p-10 text-center font-bold">
-        Tile Not Found
-      </div>
-    );
-  }
+  const res = await fetch(
+    "https://tiles-gallery-psi.vercel.app/data.json",
+    {
+      cache: "no-store",
+    }
+  );
+
+  const tiles = await res.json();
+
+  console.log("Category:", category);
+
+
+  const filteredTiles = category
+    ? tiles.filter(
+        (tile) =>
+          tile.category?.toLowerCase() === category.toLowerCase()
+      )
+    : tiles;
 
   return (
-    <div className="p-6 flex flex-col md:flex-row gap-6">
-      
-      {/* IMAGE */}
-      <img
-        src={tile.image}
-        alt={tile.title}
-        className="md:w-1/2 rounded-lg"
-      />
+    <div>
+      <h1 className="text-2xl font-bold m-4">All Tiles</h1>
 
-      {/* DETAILS */}
-      <div>
-        <h1 className="text-3xl font-bold">{tile.title}</h1>
-
-        <p className="mt-4 text-gray-600">
-          {tile.description}
-        </p>
-
-        <p className="mt-3 font-bold text-blue-600">
-          Price: {tile.price}
-        </p>
-
-        <p className="mt-2 text-sm text-gray-500">
-          Category: {tile.category}
-        </p>
-
-        <p className="mt-2 text-sm text-gray-500">
-          Material: {tile.material}
-        </p>
+           {/* GRID */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-4">
+        {filteredTiles.map((tile) => (
+          <TileCard key={tile.id} tile={tile} />
+        ))}
       </div>
     </div>
   );
 };
 
-export default TileDetails;
+export default AllTilesPage;

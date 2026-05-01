@@ -7,7 +7,7 @@ const NotFound = () => {
       <h1 className="text-6xl font-bold text-red-500">404</h1>
 
       <p className="text-xl mt-4">
-        Tile Not Found
+        Page are Not Found
       </p>
 
       <p className="text-gray-500 mt-2">
