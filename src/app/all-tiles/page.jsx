@@ -1,38 +1,52 @@
-import TileCard from "@/components/shared/TileCard";
+import { getTiles } from "../../services/api";
 
-const AllTilesPage = async ({ searchParams }) => {
-  const category = searchParams?.category;
+const TileDetails = async ({ params }) => {
+  const id = params?.id;
 
-  // 🔥 DATA FETCH
-  const res = await fetch(
-    "https://tiles-gallery-psi.vercel.app/data.json",
-    {
-      cache: "no-store", // always fresh data
-    }
-  );
+  const tiles = await getTiles();
 
-  const tiles = await res.json();
+  const tile = tiles.find((t) => String(t.id) === String(id));
 
-  // 🔍 FILTER LOGIC
-  const filteredTiles = category
-    ? tiles.filter(
-        (tile) =>
-          tile.category?.toLowerCase() === category.toLowerCase()
-      )
-    : tiles;
+  if (!tile) {
+    return (
+      <div className="p-10 text-center font-bold">
+        Tile Not Found
+      </div>
+    );
+  }
 
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold mb-6">All Tiles</h1>
+    <div className="p-6 flex flex-col md:flex-row gap-6">
+      
+      {/* IMAGE */}
+      <img
+        src={tile.image}
+        alt={tile.title}
+        className="md:w-1/2 rounded-lg"
+      />
 
-      {/* GRID */}
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
-        {filteredTiles.map((tile) => (
-          <TileCard key={tile.id} tile={tile} />
-        ))}
+      {/* DETAILS */}
+      <div>
+        <h1 className="text-3xl font-bold">{tile.title}</h1>
+
+        <p className="mt-4 text-gray-600">
+          {tile.description}
+        </p>
+
+        <p className="mt-3 font-bold text-blue-600">
+          Price: {tile.price}
+        </p>
+
+        <p className="mt-2 text-sm text-gray-500">
+          Category: {tile.category}
+        </p>
+
+        <p className="mt-2 text-sm text-gray-500">
+          Material: {tile.material}
+        </p>
       </div>
     </div>
   );
 };
 
-export default AllTilesPage;
+export default TileDetails;
