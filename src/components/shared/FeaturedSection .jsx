@@ -24,25 +24,32 @@ const featuredTiles = [
 
 const FeaturedSection = () => {
   return (
-    <div className="p-6">
-      <h2 className="text-2xl font-bold mb-4">Featured Tiles</h2>
+    <div className="px-4 md:px-6 py-6 max-w-7xl mx-auto">
+      
+      <h2 className="text-xl md:text-2xl font-bold mb-4 text-center md:text-left">
+        Featured Tiles
+      </h2>
 
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
         {featuredTiles.map((item) => (
           <div
             key={item.id}
-            className="border rounded-lg overflow-hidden shadow hover:shadow-lg transition"
+            className="border rounded-xl overflow-hidden shadow hover:shadow-lg transition"
           >
+            
             {/* IMAGE */}
             <img
               src={item.image}
               alt={item.title}
-              className="w-full h-48 object-cover"
+              className="w-full h-40 md:h-48 object-cover"
             />
 
             {/* CONTENT */}
             <div className="p-4">
-              <h3 className="font-bold text-lg">{item.title}</h3>
+              <h3 className="font-bold text-base md:text-lg">
+                {item.title}
+              </h3>
+
               <p className="text-gray-600 mt-2 text-sm">
                 {item.description}
               </p>
@@ -54,6 +61,7 @@ const FeaturedSection = () => {
                 </Button>
               </Link>
             </div>
+
           </div>
         ))}
       </div>
