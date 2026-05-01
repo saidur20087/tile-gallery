@@ -48,8 +48,8 @@ const FeaturedSection = () => {
               </p>
 
               {/* BUTTON */}
-              <Link href={`/tile/${item.id}`} className="block mt-3">
-                <Button className="w-full bg-gradient-to-r from-cyan-800 to-cyan-500 text-white">
+              <Link href={`/all-tiles/${item.id}`} className="block mt-3">
+                <Button className="w-full bg-gradient-to-r from-cyan-800 to-cyan-500">
                   View Details
                 </Button>
               </Link>

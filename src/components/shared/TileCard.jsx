@@ -45,8 +45,8 @@ const TileCard = ({ tile }) => {
         <p>Size: {tile.dimensions}</p>
       </div>
 
-      <Link href={`/tile/${tile.id}`} className="block mt-3">
-        <Button className="w-full bg-gradient-to-r from-cyan-800 to-cyan-500" >
+      <Link href={`/all-tiles/${tile.id}`} className="block mt-3">
+        <Button className="w-full bg-gradient-to-r from-cyan-800 to-cyan-500">
           View Details
         </Button>
       </Link>
