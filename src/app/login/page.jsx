@@ -38,7 +38,7 @@ export default function SignInPage() {
 
 
   return (
-    <Card className="border border-cyan-500 mx-auto w-125 py-10 mt-5">
+    <Card className="border border-cyan-500 mx-auto w-90 md:w-125 py-10 mt-5">
       <h1 className="text-center text-2xl font-bold">Sign In</h1>
 
       <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
@@ -86,12 +86,12 @@ export default function SignInPage() {
           <FieldError />
         </TextField>
 
-        <div className="flex justify-between gap-2">
-          <Button type="submit" className='bg-gradient-to-r from-cyan-800 to-cyan-500 w-full'>
+        <div className="flex md:justify-between gap-2">
+          <Button type="submit" className='bg-gradient-to-r from-cyan-800 to-cyan-500 w-40 md:w-full'>
             <Check />
             Submit
           </Button>
-          <Button type="reset" variant="secondary" className='w-full'>
+          <Button type="reset" variant="secondary" className='w-40 md:w-full'>
             Reset
           </Button>
         </div>
@@ -99,7 +99,7 @@ export default function SignInPage() {
 
       <p className="text-center">Or</p>
 
-      <Button onClick={handlGoogleSignIn}  className={'w-full bg-gradient-to-r from-cyan-800 to-cyan-500'}>
+      <Button onClick={handlGoogleSignIn}  className={' w-80 md:w-full bg-gradient-to-r from-cyan-800 to-cyan-500'}>
         <GrGoogle/> Sign In With Google</Button>
     </Card>
   );
