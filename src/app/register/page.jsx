@@ -111,11 +111,11 @@ export default function SignUpPage() {
         </TextField>
 
         <div className="flex gap-2">
-          <Button type="submit">
+          <Button type="submit" className='bg-gradient-to-r from-cyan-800 to-cyan-500 w-full'>
             <Check />
             Submit
           </Button>
-          <Button type="reset" variant="secondary">
+          <Button type="reset" variant="secondary" className='w-full'>
             Reset
           </Button>
         </div>
@@ -123,7 +123,8 @@ export default function SignUpPage() {
 
       <p className="text-center">Or</p>
 
-      <Button onClick={handlGoogleSignIn} variant="outline" className={'w-full'}><GrGoogle /> Sign In With Google</Button>
+      <Button onClick={handlGoogleSignIn} variant="outline" className={'w-full bg-gradient-to-r from-cyan-800 to-cyan-500'}>
+        <GrGoogle /> Sign In With Google</Button>
 
 
     </Card>
