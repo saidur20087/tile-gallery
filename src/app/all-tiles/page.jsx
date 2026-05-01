@@ -1,16 +1,14 @@
-import TileCard from "@/components/shared/TileCard";
+import Category from "@/components/Category";
+import TileCard from "@/components/TileCard";
 
-import { getTiles } from "../../services/api";
 const AllTilesPage = async ({ searchParams }) => {
+  const { category } = searchParams || {};
 
- 
-  const params = await searchParams;
-  const category = params?.category;
+  const res = await fetch("https://tiles-gallery-psi.vercel.app/data.json");
+  const tiles = await res.json();
 
+  console.log(category);
 
-  const tiles = await getTiles();
-
- 
   const filteredTiles = category
     ? tiles.filter(
         (tile) =>
@@ -20,22 +18,15 @@ const AllTilesPage = async ({ searchParams }) => {
 
   return (
     <div>
+      <h1 className="text-2xl font-bold m-4">All Tiles</h1>
 
-      {/* Title */}
-      <h1 className="text-2xl font-bold m-4">
-        All Tiles
-      </h1>
+      <Category />
 
-      {/* Category Filter */}
-     
-
-      {/* Tiles Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-4">
+      <div className="grid grid-cols-4 gap-5">
         {filteredTiles.map((tile) => (
           <TileCard key={tile.id} tile={tile} />
         ))}
       </div>
-
     </div>
   );
 };
