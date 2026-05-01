@@ -25,16 +25,17 @@ const HomePage = () => {
             
             {/* Main CTA */}
             <Link href="/all-tiles">
-              <Button className="bg-cyan-700 border   text-white hover:bg-blue-600">
-                Browse Tiles
+             <Button className="text-white border bg-gradient-to-r from-cyan-800 to-cyan-500 rounded ">
+                Brows Tiles
               </Button>
             </Link>
 
             {/* Secondary CTA */}
             <Link href="/my-profile">
-              <Button  variant="bordered" className="text-white border border-cyan-300">
+              <Button className="text-white border bg-transparent rounded border-cyan-800">
                 My Profile
               </Button>
+             
             </Link>
 
           </div>

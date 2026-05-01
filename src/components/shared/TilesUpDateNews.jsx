@@ -25,7 +25,7 @@ const TilesUpDateNews = () => {
       
      
       <div className="px-2 py-2 font-bold whitespace-nowrap border bg-red-500 text-white border-green-600">
-        Latest News
+        Latest Tiles News
       </div>
 
       {/* RIGHT MARQUEE */}

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const TileCard = ({ tile }) => {
   return (
-    <Card className="border rounded-xl p-3 hover:shadow-lg transition">
+    <Card className="border border-cyan-500 rounded-xl p-3 hover:shadow-lg transition">
 
       {/* Image */}
       <div className="relative w-full aspect-square">
@@ -46,7 +46,7 @@ const TileCard = ({ tile }) => {
       </div>
 
       <Link href={`/tile/${tile.id}`} className="block mt-3">
-        <Button className="w-full bg-cyan-700" >
+        <Button className="w-full bg-gradient-to-r from-cyan-800 to-cyan-500" >
           View Details
         </Button>
       </Link>

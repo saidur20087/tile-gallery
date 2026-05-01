@@ -5,7 +5,7 @@ const TopTiles = async () => {
 
   const tiles = await res.json();
 
-  const topTiles = tiles.slice(0, 8);
+  const topTiles = tiles.slice(0, 6);
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-10">
@@ -16,7 +16,7 @@ const TopTiles = async () => {
       </h1>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {topTiles.map((tile) => (
           <TileCard key={tile.id} tile={tile} />
         ))}

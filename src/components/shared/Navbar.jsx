@@ -25,8 +25,8 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center">
           <Image src="/logo.png" alt="logo" width={70} height={70} />
-          <h3 className="font-bold text-gray-700 text-lg">
-            Tiles<span className="text-cyan-700">Gallery</span>
+          <h3 className="font-bold text-gray-700 text-3xl">
+            Tiles<span className="text-cyan-700 text-3xl">Gallery</span>
           </h3>
         </div>
 
@@ -37,7 +37,7 @@ const Navbar = () => {
             <Link
               href="/"
               className={`pb-1 border-b-2 rounded ${
-                isActive("/") ? "border-cyan-700 text-cyan-700" : "border-transparent"
+                isActive("/") ? "border-cyan-700 text-cyan-700 text-lg" : "border-transparent"
               }`}
             >
               Home
@@ -48,7 +48,7 @@ const Navbar = () => {
             <Link
               href="/all-tiles"
               className={`pb-1 border-b-2 rounded ${
-                isActive("/all-tiles") ? "border-cyan-700 text-cyan-700" : "border-transparent"
+                isActive("/all-tiles") ? "border-cyan-700 text-cyan-700 text-lg" : "border-transparent"
               }`}
             >
               All Tiles
@@ -59,7 +59,7 @@ const Navbar = () => {
             <Link
               href="/my-profile"
               className={`pb-1 border-b-2 rounded ${
-                isActive("/my-profile") ? "border-cyan-700 text-cyan-700" : "border-transparent"
+                isActive("/my-profile") ? "border-cyan-700 text-cyan-700 text-lg" : "border-transparent"
               }`}
             >
               My Profile
@@ -76,11 +76,11 @@ const Navbar = () => {
           {!user && !isPending && (
             <div className="flex gap-3 text-sm">
               <Link href="/register" >
-                <Button size="sm" >Register</Button>
+                <Button size="md" className="bg-gradient-to-r from-cyan-800 to-cyan-500 rounded" >Register</Button>
               </Link>
 
               <Link href="/login">
-                <Button size="sm" color="primary" className="bg-cyan-700">Login</Button>
+                <Button size="md" className="border border-cyan-700 bg-gray-500 rounded">Login</Button>
               </Link>
             </div>
           )}

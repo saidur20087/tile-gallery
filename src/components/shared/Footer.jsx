@@ -6,13 +6,13 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-cyan-800 text-white mt-10">
+    <footer className="bg-gradient-to-r from-cyan-800 to-cyan-500 text-white mt-10">
       <div className="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-4 gap-8">
         
         {/* Logo & Description */}
         <div>
           <h2 className="text-2xl font-bold">TileGallery</h2>
-          <p className="mt-3 text-gray-400">
+          <p className="mt-3 text-gray-200">
             Discover premium tiles for your perfect aesthetic. Modern, stylish and high-quality collections.
           </p>
         </div>
@@ -20,7 +20,7 @@ const Footer = () => {
         {/* Navigation Links */}
         <div>
           <h3 className="text-lg font-semibold mb-3 text-center ">Quick Links</h3>
-          <ul className="space-y-2 text-gray-400 text-center">
+          <ul className="space-y-2 text-gray-200 text-center">
             <li>
               <Link href="/">Home</Link>
             </li>
@@ -48,8 +48,8 @@ const Footer = () => {
         {/* Contact & Social */}
         <div>
           <h3 className="text-lg font-semibold mb-3">Contact Us</h3>
-          <p className="text-gray-400">Email: support@tilegallery.com</p>
-          <p className="text-gray-400">Phone: +880 1234-567890</p>
+          <p className="text-gray-200">Email: support@tilegallery.com</p>
+          <p className="text-gray-200">Phone: +880 1234-567890</p>
 
 
         </div>
