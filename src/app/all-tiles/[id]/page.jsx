@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
+
 const TileDetails = async ({ params }) => {
   const { id } = await params;
 
@@ -19,7 +22,7 @@ const TileDetails = async ({ params }) => {
   return (
     <div className="max-w-6xl mx-auto p-6">
       <div className="grid md:grid-cols-2 gap-10 items-center bg-white shadow-lg rounded-2xl p-6">
-        
+
         {/* Image */}
         <div className="w-full">
           <img
@@ -50,9 +53,12 @@ const TileDetails = async ({ params }) => {
             ${tile.price} <span className="text-sm text-gray-500">{tile.currency}</span>
           </div>
 
-          <button className="mt-4 w-full bg-gradient-to-r from-cyan-700 to-cyan-500 text-white py-3 rounded-lg hover:opacity-90 transition">
-            Buy Now
-          </button>
+          <Link href="/" className="block mt-3">
+            <button className="mt-4 w-full flex justify-center text-center items-center gap-2 bg-gradient-to-r from-cyan-700 to-cyan-500 text-white py-3 rounded-lg hover:opacity-90 transition">
+              Back to Home<FaArrowRight />
+            </button>
+          </Link>
+
         </div>
       </div>
     </div>
