@@ -19,7 +19,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="border-b bg-white">
+    <div className="border-b border-cyan-700 sticky top-0 z-50 shadow  bg-white">
       <nav className="grid grid-cols-1 md:grid-cols-3 items-center gap-4 py-3 px-4 max-w-7xl mx-auto">
 
         {/* Logo */}

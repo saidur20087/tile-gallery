@@ -58,7 +58,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom */}
-      <div className="border-t border-gray-700 text-center py-4 text-gray-200 text-sm">
+      <div className="border-t border-cyan-700 text-center py-4 text-gray-200 text-sm">
         © {new Date().getFullYear()} TileGallery. All rights reserved.
       </div>
 
