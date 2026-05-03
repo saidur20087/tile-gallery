@@ -7,7 +7,7 @@ const TileCard = ({ tile }) => {
     <Card className="border border-cyan-500 rounded-xl p-3 hover:shadow-lg transition">
 
       {/* Image */}
-      <div className="relative w-full aspect-square">
+      <div className="relative h-80 w-full aspect-square">
         <Image
           src={tile.image}
           alt={tile.title}

@@ -6,19 +6,19 @@ const featuredTiles = [
     id: 1,
     title: "Modern Ceramic Tile",
     description: "Perfect for stylish interior design.",
-    image: "https://i.ibb.co.com/Z6n635hk/hannahlouise123-checkerboard-1943243-1920.png",
+    image: "https://i.ibb.co.com/DHsNJHJD/lisa-anna-tvtmoa6-r-JE-unsplash.jpg",
   },
   {
     id: 2,
     title: "Luxury Marble Tile",
     description: "Premium finish for elegant spaces.",
-    image: "https://i.ibb.co.com/7dn0r3WM/thedigitalartist-tiles-1557136-1920.jpg",
+    image: "https://i.ibb.co.com/TMW6xmpF/tile-merchant-ireland-0-XSNQhjdjh8-unsplash.jpg",
   },
   {
     id: 3,
     title: "Outdoor Anti-Slip Tile",
     description: "Safe and durable outdoor solution.",
-    image: "https://i.ibb.co.com/5g7XtDYp/hannahlouise123-checkerboard-1941014-1920.png",
+    image: "https://i.ibb.co.com/2Y6h9sYz/gach-luxcasa-QLUEXfxcm-SI-unsplash.jpg",
   },
 ];
 
@@ -34,7 +34,7 @@ const FeaturedSection = () => {
         {featuredTiles.map((item) => (
           <div
             key={item.id}
-            className="border rounded-xl overflow-hidden shadow hover:shadow-lg transition"
+            className="border border-cyan-500 rounded-xl overflow-hidden shadow hover:shadow-lg transition"
           >
             
             {/* IMAGE */}

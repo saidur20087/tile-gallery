@@ -24,8 +24,8 @@ const TilesUpDateNews = () => {
     <div className="flex items-center bg-gray-200 mt-8 rounded border border-green-00 text-white  overflow-hidden">
       
      
-      <div className="px-2 py-2 font-bold whitespace-nowrap border bg-red-400 text-white border-green-600">
-        Latest Tiles News
+      <div className="px-2 py-2 font-bold whitespace-nowrap border bg-cyan-600 text-white border-green-600">
+        Latest Tiles 
       </div>
 
       {/* RIGHT MARQUEE */}

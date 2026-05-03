@@ -23,7 +23,7 @@ const features = [
 
 const WhyChooseUs = () => {
   return (
-    <div className="py-12 px-6 bg-gradient-to-r from-cyan-900 to-cyan-700 text-white mt-10">
+    <div className="py-12 px-6 bg-gradient-to-r from-cyan-500 to-cyan-800 text-white mt-10">
       
       {/* TITLE */}
       <h2 className="text-3xl font-bold text-center mb-10">
