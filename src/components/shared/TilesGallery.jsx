@@ -12,7 +12,7 @@ const TopTiles = async () => {
 
       {/* Title */}
       <h1 className="text-2xl md:text-3xl font-bold mb-6">
-        Top Tiles
+        Featured Tiles
       </h1>
 
       {/* Grid */}
